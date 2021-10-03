@@ -17,8 +17,8 @@ char	*ft_strcpy(char *dest, char *src)
 
 /*int	main(int argc, char *argv[])
 {
-	char	dest1[100] = "tinkoromanzyu";
-	char	dest2[100] = "iniminirerai";
+	char	dest1[] = "tinkoromanzyu";
+	char	dest2[] = "iniminirerai";
 	char	*src;
 
 	if (argc < 1)
