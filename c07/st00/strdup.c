@@ -31,7 +31,7 @@ char	*k_strdup(char *src)
 
 int main()
 {
-	char *test = "Testando a strdup!";
+	char *test = "inimini rerai!";
 	char *dup;
 
 	printf("test = %s\n", test);
