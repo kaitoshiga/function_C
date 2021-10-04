@@ -1,32 +1,28 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-int k_strlen(char *str)
+int k_strlen(char *src)
 {
 	int c = 0;
-	while (str[c] != '\0')
+	while (src[c])
 		c++;
 	return (c);
-}
-
-char	*k_strcpy(char *dest, char *src)
-{
-	int c = 0;
-	while(src[c] != '\0')
-	{
-		dest[c] = src[c];
-		c++;
-	}
-	dest[c] = '\0';
-	return (dest);
 }
 
 char	*k_strdup(char *src)
 {
 	char *dest;
+	int i = 0;
 
-	dest = malloc((k_strlen(src) + 1) * sizeof(char));
-	return (dest ? k_strcpy(dest, src) : dest);
+	if (!(dest = malloc((k_strlen(src) + 1)* sizeof(char))))
+		return (NULL);
+
+	while (src[i])
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	return (dest);
 }
 
 int main()
